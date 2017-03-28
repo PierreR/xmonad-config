@@ -1,0 +1,10 @@
+# Xmonad config
+
+http://xmonad.org/[xmonad] is a X11 tiling window manager.
+
+## Status bar
+
+By default, the configuration comes with the https://github.com/travitch/taffybar[taffybar] status bar.
+Alternatively you can use the more minimalistic http://projects.haskell.org/xmobar/[xmobar] by changing the .xmonad/xmonad.hs link. 
+
+
