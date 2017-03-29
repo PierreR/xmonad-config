@@ -1,0 +1,10 @@
+*
+!/.config
+!/.config/taffybar
+!/.config/taffybar/taffybar.hs
+!/.config/taffybar/taffybar.rc
+!/.xmobarrc
+!/.xmonad
+!/.xmonad/xmonad.hs
+!/.xmonad/xmonad-taffybar.hs
+!/.xmonad/xmonad-xmobar.hs
