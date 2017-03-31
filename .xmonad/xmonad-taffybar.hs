@@ -166,12 +166,12 @@ myStartupHook = do
   spawnOnce "stalonetray"
   spawn "albert -p $(dirname $(readlink $(which albert)))/../lib/albert/plugins"
 
-myManageHook = composeAll
-  [isFullscreen --> doFullFloat 
-  , title =? "Eclipse" --> doFloat
-  , resource =? "albert" --> doCenterFloat
-  , className =? "Emacs" --> doShift "1"
-  , isDialog --> doCenterFloat
+myManageHook = composeOne
+  [ isDialog -?> doCenterFloat
+  , resource =? "albert" -?> doCenterFloat
+  , title =? "Eclipse" -?> doFloat
+  , className =? "Emacs" -?> doShift "1"
+  , isFullscreen -?> doFullFloat
   ]
 
 azertyKeys conf@XConfig {modMask = modm} = M.fromList $
