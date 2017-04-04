@@ -40,8 +40,8 @@ myKeys conf@XConfig {XMonad.modMask = modm} = M.fromList $
     -- , ((modm, xK_p), GridSelect.spawnSelected GridSelect.def [ "eclipse", "chromium" ])
 
     -- launch editor
-    -- , ((modm .|. shiftMask, xK_comma ), spawn "emacsclient -c")
-    , ((modm .|. shiftMask, xK_comma ), spawn "emacs")
+    , ((modm .|. shiftMask, xK_comma ), spawn "emacsclient -c")
+    -- , ((modm .|. shiftMask, xK_comma ), spawn "emacs")
 
     -- resize wallpaper
     , ((modm .|. shiftMask, xK_i), spawn "feh --bg-scale ${HOME}/.wallpaper.jpg" )
