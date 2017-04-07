@@ -168,11 +168,10 @@ myStartupHook = do
 
 myManageHook = composeOne
   [ isDialog -?> doCenterFloat
-  , resource =? "albert" -?> doCenterFloat
   , title =? "Eclipse" -?> doFloat
   , className =? "Emacs" -?> doShift "1"
   , isFullscreen -?> doFullFloat
-  ]
+  ] <+> composeAll [ resource =? "albert" --> doCenterFloat]
 
 azertyKeys conf@XConfig {modMask = modm} = M.fromList $
     ((modm, xK_semicolon), sendMessage (IncMasterN (-1))) :
