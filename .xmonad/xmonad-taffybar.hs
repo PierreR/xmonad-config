@@ -164,7 +164,7 @@ myStartupHook = do
   -- setDefaultCursor xC_left_ptr
   setWMName "LG3D"
   spawnOnce "stalonetray"
-  spawn "albert -p $(dirname $(readlink $(which albert)))/../lib/albert/plugins"
+  spawn "albert"
 
 myManageHook = composeOne
   [ isDialog -?> doCenterFloat
